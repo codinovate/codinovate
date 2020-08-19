@@ -69,7 +69,8 @@
     <link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- Pixel CSS -->
-    <link type="text/css" href="./css/dark-neumorphism.css" rel="stylesheet">
+    <link type="text/css" href="./css/dark-neumorphism.css" rel="stylesheet" id="theme_css">
+    <link type="text/css" href="./css/style.css" rel="stylesheet">
 
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -81,7 +82,29 @@
 
         <!-- Hero -->
         <section class="section section  bg-soft  overflow-hidden z-2">
+
             <div class="card bg-primary shadow-soft border-li mx-3 mt-0 text-center">
+                <a aria-label="facebook social link" class="icon icon-xs mr-2 theme-switch" id="theme-switch">
+                    <span class="fas fa-sun text-white" id="theme-content"></span>
+                </a>
+                <script>
+                    document.getElementById('theme-switch').onclick = function () {
+                        if (document.getElementById("theme-content").classList.value.includes("fa-sun")) {
+                            document.getElementById('theme_css').href = './css/neumorphism.css';
+                            document.getElementById("theme-content").classList.remove('fa-sun');
+                            document.getElementById("theme-content").classList.remove('text-white');
+                            document.getElementById("theme-content").classList.add('fa-moon');
+                            document.getElementById("theme-content").classList.add('text-black');
+                        } else {
+                            document.getElementById('theme_css').href = './css/dark-neumorphism.css';
+                            document.getElementById("theme-content").classList.remove('fa-moon');
+                            document.getElementById("theme-content").classList.remove('text-black');
+                            document.getElementById("theme-content").classList.add('fa-sun');
+                            document.getElementById("theme-content").classList.add('text-white');
+                        }
+
+                    };
+                </script>
                 <div class="profile-image shadow-inset border border-light bg-primary p-0 rounded-circle mt-n5 mx-auto">
                     <img src="assets/img/logo.png" class="card-img-top p-0 rounded-circle" alt="CODINOVATE">
                 </div>
@@ -90,14 +113,14 @@
                     <span class="h6 font-weight-normal text-gray mb-3">Coder</span>
                     <ul class="list-unstyled d-flex justify-content-center my-3">
                         <li>
-                            <a href="" target="_blank" aria-label="facebook social link"
+                            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook social link"
                                 class="icon icon-xs  text-facebook mr-3">
                                 <span class="fab fa-facebook-f"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/codinovate/" target="_blank" aria-label="instagram social link"
-                                class="icon icon-xs text-dribbble mr-3">
+                            <a href="https://www.instagram.com/codinovate/" target="_blank"
+                                aria-label="instagram social link" class="icon icon-xs text-dribbble mr-3">
                                 <span class="fab fa-instagram"></span>
                             </a>
                         </li>
@@ -118,7 +141,8 @@
                     <!-- main content tags -->
                     <post>
                         <!-- post 1 -->
-                        <div class="card post bg-primary shadow-soft border-light" onclick="window.open('https://codepen.io/codinovate/pen/abNmNKg')">
+                        <div class="card post bg-primary shadow-soft border-light"
+                            onclick="window.open('https://codepen.io/codinovate/pen/abNmNKg')">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-md-4">
                                     <img src="assets/img/posts/theme_button.png" class="card-img rounded-left"
@@ -145,7 +169,8 @@
 
                         <br>
                         <!-- post 2 -->
-                        <div class="card post bg-primary shadow-soft border-light" onclick="window.open('https://codinovate-anim.netlify.app')">
+                        <div class="card post bg-primary shadow-soft border-light"
+                            onclick="window.open('https://codinovate-anim.netlify.app')">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-md-4">
                                     <img src="assets/img/posts/to_5_anim.png" class="card-img rounded-left"
@@ -172,26 +197,26 @@
                     </post>
                     <div class="row mt-5">
                         <div class="col-4">
-                            <div
+                            <a href="https://www.facebook.com/" target="blank"
                                 class="icon icon-shape icon-shape-xs text-facebook icon-shape-primary shadow-soft border border-light rounded-circle mb-2">
                                 <span class="fab fa-facebook-f"></span>
-                            </div>
+                        </a>
                             <h2 class="h5 mb-0">0</h2>
                             <span class="small">Just Started</span>
                         </div>
                         <div class="col-4">
-                            <div
+                            <a href="https://www.instagram.com/codinovate/" target="blank"
                                 class="icon icon-shape icon-shape-xs text-dribbble icon-shape-primary shadow-soft border border-light rounded-circle mb-2">
                                 <span class="fab fa-instagram"></span>
-                            </div>
+                            </a>
                             <h2 class="h5 mb-0">82</h2>
                             <span class="small">Followers</span>
                         </div>
                         <div class="col-4">
-                            <div
+                            <a href="https://github.com/codinovate" target="blank"
                                 class="icon icon-shape icon-shape-xs text-github icon-shape-primary shadow-soft border border-light rounded-circle mb-2">
                                 <span class="fab fa-github"></span>
-                            </div>
+                            </a>
                             <h2 class="h5 mb-0">6</h2>
                             <span class="small">Repositories</span>
                         </div>
