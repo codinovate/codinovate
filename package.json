@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "instagram-nodejs-without-api": "^1.2.0",
+    "request": "^2.88.2"
+  }
+}
