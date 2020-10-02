@@ -93,7 +93,7 @@
 
 </head>
 
-<body>
+<body id='body'>
 
     <main>
 
@@ -102,28 +102,21 @@
 
             <div class="card bg-primary shadow-soft border-li mx-3 mt-0 text-center">
                 <a aria-label="facebook social link" class="icon icon-xs mr-2 theme-switch" id="theme-switch">
-                    <span class="fas fa-moon text-black" id="theme-content"></span>
+                    <span class="fas fa-moon text-black spicon" id="theme-content"></span>
                 </a>
                 <script>
                     document.getElementById('theme-switch').onclick = function () {
-                        if (document.getElementById("theme-content").classList.value.includes("fa-sun")) {
-                            document.getElementById('theme_css').href = './css/neumorphism.css';
-                            document.getElementById("theme-content").classList.remove('fa-sun');
-                            document.getElementById("theme-content").classList.remove('text-white');
-                            document.getElementById("theme-content").classList.add('fa-moon');
-                            document.getElementById("theme-content").classList.add('text-black');
-                        } else {
-                            document.getElementById('theme_css').href = './css/dark-neumorphism.css';
-                            document.getElementById("theme-content").classList.remove('fa-moon');
-                            document.getElementById("theme-content").classList.remove('text-black');
-                            document.getElementById("theme-content").classList.add('fa-sun');
-                            document.getElementById("theme-content").classList.add('text-white');
+                        document.getElementById("theme-content").classList.toggle('fa-moon');
+                        document.getElementById("theme-content").classList.toggle('fa-sun');
+                        img = [document.getElementById('body'),...document.getElementsByTagName('img'), ...document.getElementsByTagName('span'), ...document.getElementsByClassName('spicon')];
+                        for (let index = 0; index < img.length; index++) {
+                            const element = img[index];
+                            element.classList.toggle('inver');
                         }
-
                     };
                 </script>
                 <div class="profile-image shadow-inset border border-light bg-primary p-0 rounded-circle mt-n5 mx-auto">
-                    <img src="assets/img/logo.png" class="card-img-top p-0 rounded-circle" alt="CODINOVATE">
+                    <img src="assets/img/logo.png" class="card-img-top p-0 rounded-circle img" alt="CODINOVATE">
                 </div>
                 <div class="card-body">
                     <h3 class="h5 mb-2">CODINOVATE</h3>
@@ -144,7 +137,7 @@
                         <li>
                             <a href="https://github.com/codinovate" target="_blank" aria-label="github social link"
                                 class="icon icon-xs text-github mr-3">
-                                <span class="fab fa-github"></span>
+                                <span class="fab fa-github spicon"></span>
                             </a>
                         </li>
                         <li>
@@ -232,7 +225,7 @@
                         <div class="col-4">
                             <a href="https://github.com/codinovate" target="blank"
                                 class="icon icon-shape icon-shape-xs text-github icon-shape-primary shadow-soft border border-light rounded-circle mb-2">
-                                <span class="fab fa-github"></span>
+                                <span class="fab fa-github spicon"></span>
                             </a>
                             <h2 class="h5 mb-0">6</h2>
                             <span class="small">Repositories</span>

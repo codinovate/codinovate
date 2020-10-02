@@ -12,3 +12,7 @@
   }
 
 }
+
+.inver{
+  filter: invert(1);
+}
