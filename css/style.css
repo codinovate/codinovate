@@ -16,3 +16,13 @@
 .inver{
   filter: invert(1);
 }
+
+.post{
+  transition: 0.75s;
+  opacity: 0.6;
+}
+.post:hover{
+  opacity: 1;
+  transition: 0.75s;
+}
+
