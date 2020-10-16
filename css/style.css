@@ -10,7 +10,9 @@
     top: 0.4%;
     left: 1%;
   }
-
+  .post{
+    opacity: 1;
+  }
 }
 
 .inver{
